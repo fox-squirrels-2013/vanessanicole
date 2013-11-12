@@ -5,9 +5,12 @@ get '/' do
 end
 
 get '/:username' do
-  p "*"*15
+  @user = TwitterUser.find_by_name(params[:username])
+  if @user.tweets.empty?
+    @user.fetch_tweets!
+  end
 
-  @user_timeline = Twitter.user_timeline
+  @tweets = @user.tweets.limit(10)
   erb :index
 end
 
