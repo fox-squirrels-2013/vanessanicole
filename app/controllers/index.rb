@@ -1,17 +1,14 @@
+enable :sessions
+
 get '/' do
-  @events = Event.all
+
+end
+
+get '/:username' do
+  p "*"*15
+
+  @user_timeline = Twitter.user_timeline
   erb :index
 end
 
-get '/events/:id/show' do |id|
-  @event = Event.find(id)
-  erb :event_show
-end
 
-get '/events/new' do
-  #TODO IMPLEMENT ME
-end
-
-post '/events/create' do
-  #TODO IMPLEMENT ME
-end

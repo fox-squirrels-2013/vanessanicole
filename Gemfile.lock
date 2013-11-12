@@ -20,8 +20,12 @@ GEM
     eventmachine (1.0.3)
     faker (1.1.2)
       i18n (~> 0.5)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     i18n (0.6.4)
+    json (1.8.0)
     multi_json (1.7.4)
+    multipart-post (1.2.0)
     pg (0.15.1)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -37,6 +41,7 @@ GEM
     rspec-mocks (2.13.1)
     shotgun (0.9)
       rack (>= 1.0)
+    simple_oauth (0.2.0)
     sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
       rack-protection (~> 1.4)
@@ -46,6 +51,10 @@ GEM
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.4.1)
+    twitter (4.8.1)
+      faraday (~> 0.8, < 0.10)
+      multi_json (~> 1.0)
+      simple_oauth (~> 0.2)
     tzinfo (0.3.37)
 
 PLATFORMS
@@ -56,9 +65,11 @@ DEPENDENCIES
   activesupport
   bcrypt-ruby
   faker
+  json
   pg
   rake
   rspec
   shotgun
   sinatra
   thin
+  twitter
