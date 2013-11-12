@@ -9,6 +9,10 @@ end
 
 # Twitter.update(ARGV[0])
 user = Twitter.user('vipyne')
+
+# p user.text
+
+
 p user[:status][:text]
 user_timeline = Twitter.home_timeline
 user_timeline.each do |tweet|

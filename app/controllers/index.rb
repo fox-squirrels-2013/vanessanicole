@@ -10,7 +10,8 @@ get '/:username' do
     @user.fetch_tweets!
   end
 
-  @tweets = @user.tweets.limit(10)
+  @tweets = @user.tweets
+  p @tweets
   erb :index
 end
 

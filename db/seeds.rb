@@ -1,9 +1,3 @@
-require 'faker'
+user = TwitterUser.create(name: 'vipyne')
 
-10.times do |i|
-  Event.create({
-    :date => Date.today + i,
-    :title => "Event #{i}",
-    :organizer_name => "Organizer #{i}",
-    :organizer_email => "organizer_#{i}@example.com" })
-end
+Tweet.create(twitter_user_id: user.id)

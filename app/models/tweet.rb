@@ -1,9 +1,4 @@
 class Tweet < ActiveRecord::Base
-  belongs_to :twitter_us
-
-  def fetch_tweets!
-
-  end
-
+  belongs_to :twitter_user
 
 end
